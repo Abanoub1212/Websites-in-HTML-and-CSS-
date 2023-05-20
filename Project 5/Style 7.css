@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    text-decoration: none;
+}
+main{
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    background-image:linear-gradient(rgba(0,0,0,0.3),transparent),url(imgs/background.png);
+    background-position: center;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+.logo{
+    flex-basis: 5%;
+}
+.logo img{
+    width: 120px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: white;
+    margin-right: 30px;
+    position: relative;
+}
+nav .menu img{
+    width: 30px;
+    cursor: pointer;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    border-radius: 8px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+section{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    position: relative;
+    padding:0 0 50px 110px;
+
+}
+section p.txt{
+    font-size: 50px;
+    font-weight:600;
+}
+section h1{
+    font-size: 190px;
+    line-height: 160px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(imgs/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    margin-left: -10px;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+section h2{
+    font-size: 40px;
+    font-weight: 500;
+}
+section .btn{
+    display: flex;
+    margin: 30px 0 0 0;
+    flex-wrap: wrap;
+}
+section .btn a{
+    color: white;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-right: 20px;
+    position: relative;
+}
+section .btn a::before{
+    content: '';
+    height: 100%;
+    width: 0;
+    left: -1px;
+    background-color: #fff;
+    position: absolute;
+    transition:  0.3s linear;
+    border: 2px solid #fff;
+}
+section .btn a:nth-of-type(1):after{
+    content: "Explore My Protfolio";
+    position: absolute;
+    color: rgb(0, 172, 240);
+    transition:  0.5s linear;
+    display: none;
+}
+section .btn a:nth-of-type(2):after{
+    content:attr(datatype);
+    position: absolute;
+    color: rgb(0, 172, 240);
+    transition:  0.5s linear;
+    display: none;
+}
+section .btn a:hover::before{
+    width: 100%;
+}
+section .btn a:hover::after{
+    display: block;
+}
+section .btn a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+}
+section .social{
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+.social img{
+    width: 25px;
+    margin: 10px 5px;
+    display: block;
+    transition: 0.3s linear;
+}
+.social img:hover{
+    transform: scale(2);
+    box-shadow: 10px 10px #0000;
+}
+
+.menu img:hover{
+    color:burlywood
+}
